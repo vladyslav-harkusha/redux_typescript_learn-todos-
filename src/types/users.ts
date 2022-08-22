@@ -1,5 +1,21 @@
+interface User {
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+  address: {
+    street: string;
+    city: string;
+    geo: {
+      lat: number;
+      lng: number;
+    };
+  };
+  phone: number
+}
+
 export interface UsersState {
-  users: any[];
+  users: User[];
   loading: boolean;
   error: null | string;
 }
@@ -16,7 +32,7 @@ interface FetchUsersAction {
 
 interface FetchUsersSuccessAction {
   type: UserActionTypes.FETCH_USERS_SUCCESS;
-  payload: any[];
+  payload: User[];
 }
 
 interface FetchUsersErrorAction {

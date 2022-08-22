@@ -20,6 +20,9 @@ export const fetchTodos = (page = 1, limit = 10) => {
     } catch (error) {
       dispatch({ type: TodosActionTypes.FETCH_TODOS_ERROR, payload: `Todos loading error: ${error}` })
     }
-  }
+  };
 };
 
+export const setTodosPage = (page: number): TodosAction => {
+  return { type: TodosActionTypes.SET_TODOS_PAGE, payload: page }
+};

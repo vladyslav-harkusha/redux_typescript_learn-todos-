@@ -1,5 +1,12 @@
+interface Todo {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
+}
+
 export interface TodosState {
-  todos: any[];
+  todos: Todo[];
   loading: boolean;
   error: null | string;
   page: number;
@@ -19,7 +26,7 @@ interface FetchTodosAction {
 
 interface FetchTodosSuccessAction {
   type: TodosActionTypes.FETCH_TODOS_SUCCESS;
-  payload: any[];
+  payload: Todo[];
 }
 
 interface FetchTodosErrorAction {
