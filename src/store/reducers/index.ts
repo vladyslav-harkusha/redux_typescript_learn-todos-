@@ -5,5 +5,3 @@ import { usersReducer } from "./usersReducer";
 export const rootReducer = combineReducers({
   usersReducer,
 });
-
-export type RootState = ReturnType<typeof rootReducer>;
